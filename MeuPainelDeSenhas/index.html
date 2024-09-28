@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Painel de Senhas</title>
+</head>
+<body>
+
+    <h1>Meu Painel de Senhas</h1>
+    <p>Gerencie suas senhas de maneira organizada e eficiente</p>
+
+    <h2>Controle de Senhas</h2>
+
+    <div>
+        <h3>Gerar Senha</h3>
+        <button onclick="gerarSenhaComum()">Gerar Senha Comum</button>
+        <button onclick="gerarSenhaEspecial()">Gerar Senha Especial</button>
+    </div>
+
+    <div>
+        <h3>Atender Senha</h3>
+        <button onclick="atenderSenhaComum()">Atender Senha Comum</button>
+        <button onclick="atenderSenhaEspecial()">Atender Senha Especial</button>
+    </div>
+
+    <div>
+        <h3>Filas de Senhas</h3>
+        <p><strong>Fila Comum:</strong> <span id="filaComum">Nenhuma senha</span></p>
+        <p><strong>Fila Especial:</strong> <span id="filaEspecial">Nenhuma senha</span></p>
+    </div>
+
+    <div>
+        <h3>Senha Atendida</h3>
+        <p><strong>Atendendo:</strong> <span id="senhaAtendida">Nenhuma</span></p>
+    </div>
+
+    <p>© 2024 Meu Painel de Senhas. Ana Beatriz Martins Batista.</p>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
