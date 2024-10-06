@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Senhas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vue.global.js"></script> 
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 class="mb-0">Meu Painel de Senhas</h1>
+            <p class="mb-0">Gerencie suas senhas de maneira organizada e eficiente</p>
+        </header>
+
+        <div class="container content py-5">
+            <h2 class="text-center mb-5">Controle de Senhas</h2>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h3>Gerar Senha</h3>
+                    <button class="btn btn-primary me-2" @click="gerarSenhaComum">Gerar Senha Comum</button>
+                    <button class="btn btn-danger" @click="gerarSenhaEspecial">Gerar Senha Especial</button>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>Atender Senha</h3>
+                    <button class="btn btn-success me-2" @click="atenderSenhaComum">Atender Senha Comum</button>
+                    <button class="btn btn-warning" @click="atenderSenhaEspecial">Atender Senha Especial</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Filas de Senhas</h3>
+                    <div class="mb-3">
+                        <p><strong>Fila Comum:</strong> <span class="badge bg-primary">{{ filaComum.length ? filaComum.join(', ') : 'Nenhuma senha' }}</span></p>
+                    </div>
+                    <div>
+                        <p><strong>Fila Especial:</strong> <span class="badge bg-danger">{{ filaEspecial.length ? filaEspecial.join(', ') : 'Nenhuma senha' }}</span></p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>Senha Atendida</h3>
+                    <p class="lead">
+                        <strong>Atendendo:</strong> <span class="badge bg-info">{{ senhaAtendida || 'Nenhuma' }}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Meu Painel de Senhas. Ana Beatriz Martins Batista.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
